@@ -22,6 +22,7 @@ func main() {
 			"title": "Main website",
 		})
 	})
+	r.POST("/webhook/jira_events", controllers.JiraEvents)
 	r.GET("/books", controllers.FindBooks)
 	r.POST("/books", controllers.CreateBook)
 	r.GET("/books/:id", controllers.FindBook)
